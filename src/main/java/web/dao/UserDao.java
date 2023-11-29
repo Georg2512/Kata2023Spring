@@ -5,15 +5,14 @@ import web.model.User;
 import java.util.List;
 
 public interface UserDao {
-    void createUsersTable();
+    void saveUser(User user);
 
-    void dropUsersTable();
+    void updateUser(User updateUser);
 
-    void saveUser(String name, String lastName, byte age);
-
-    void removeUserById(long id);
+    void removeUserById(int id);
 
     List<User> getAllUsers();
 
-    void cleanUsersTable();
+    User getUserById(int id);
+
 }
