@@ -32,7 +32,7 @@
     <p>
     <label for="email">Email</label>
     <input type="text" th:field="*{email}" id="email">
-    <div style="color:red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}">Ошибка</div>
+    <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Ошибка</div>
     <br/>
     <p>
     <input type="submit" value="Изменить">

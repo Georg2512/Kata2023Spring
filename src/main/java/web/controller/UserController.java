@@ -17,8 +17,14 @@ public class UserController {
         this.userDao = userDao;
     }
 
+    @GetMapping("/")
+    public String main(Model model){
+        model.addAttribute("user",userDao.getAllUsers());
+        return "view/user";
+    }
+
     @ModelAttribute("newUser")
-    public User getPerson(){
+    public User getUser(){
         return new User();
     }
     @GetMapping("/user")
